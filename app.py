@@ -18,7 +18,7 @@ def predict():
     final_features = [np.array(float_features)]
     prediction = model.predict(final_features)
 
-    output = round(prediction[0], 7)
+    output = round(prediction[0], 6)
 
     return render_template('index.html', prediction_text='Your diabatic test result is --  {}'.format(output))
 
